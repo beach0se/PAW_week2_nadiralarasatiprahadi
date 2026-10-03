@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nadira Larasati Prahadi</title>
+<!-- HTML Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌸%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka:wght@500&display=swap" rel="stylesheet">
+<!-- HTML CSS -->
+<style>
+:root{
+  --bg:#fff7f3; --card:#ffffff; --pink:#ffc8dd; --pink-d:#e0709a;
+  --lilac:#cdb4f6; --butter:#ffe7a3; --ink:#5b4552; --soft:#8e7784;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+  font-family:'Quicksand',Arial,sans-serif; line-height:1.6;
+  background-image:radial-gradient(var(--pink) 1.5px,transparent 1.5px);
+  background-size:28px 28px;
+}
+main{max-width:640px; margin:0 auto; padding:48px 20px 32px; text-align:center}
+.card{background:var(--card); border-radius:28px; padding:32px 24px; box-shadow:0 8px 0 var(--pink); border:2px solid var(--pink)}
+picture img{width:170px; height:170px; border-radius:50%; object-fit:cover; border:6px solid var(--butter); box-shadow:0 0 0 4px var(--lilac)}
+h1{font-family:'Fredoka',sans-serif; font-weight:500; font-size:2rem; margin:20px 0 4px; color:var(--pink-d)}
+h2{font-size:1.05rem; margin:0; color:var(--ink)}
+h3{font-size:.95rem; margin:2px 0 0; color:var(--soft); font-weight:600}
+h4{font-size:.9rem; margin:18px 0 8px; color:var(--lilac)}
+h5{font-size:.85rem; margin:0; color:var(--soft); font-weight:600}
+h6{font-size:.75rem; margin:2px 0 0; color:var(--soft); font-weight:400}
+.socials{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:24px 0 8px}
+.socials a{text-decoration:none; color:var(--ink); width:74px; font-size:.78rem; font-weight:600}
+.socials span{display:flex; align-items:center; justify-content:center; width:54px; height:54px; margin:0 auto 4px; border-radius:50%; font-size:1.5rem; background:var(--pink); transition:transform .2s}
+.socials a:nth-child(2n) span{background:var(--lilac)}
+.socials a:nth-child(3n) span{background:var(--butter)}
+.socials a:hover span{transform:translateY(-4px)}
+a:focus-visible{outline:3px solid var(--pink-d); outline-offset:3px; border-radius:12px}
+table{margin:8px auto 0; border-collapse:separate; border-spacing:0; width:100%; max-width:440px; text-align:left; font-size:.92rem}
+th,td{padding:9px 14px; border-bottom:2px dotted var(--pink)}
+th{color:var(--pink-d); width:38%}
+.clock{margin-top:22px; display:inline-block; background:var(--butter); padding:8px 18px; border-radius:99px; font-weight:700; font-size:.85rem}
+footer{margin-top:20px; font-size:.78rem; color:var(--soft)}
+@media(max-width:480px){h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<main>
+  <section class="card">
+    <!-- HTML Picture -->
+    <picture>
+      <source srcset="foto.jpg" type="image/jpeg">
+      <img src="foto.jpg" alt="Foto Nadira Larasati Prahadi">
+    </picture>
+
+    <!-- HTML Heading 1-6, Align, Font, Color Text -->
+    <h1>Nadira Larasati Prahadi</h1>
+    <h2>NIM 102042500038</h2>
+    <h3>Program Studi Sistem Informasi</h3>
+    <h3>Fakultas Rekayasa Industri</h3>
+
+    <!-- HTML Link (target="_blank") -->
+    <div class="socials">
+      <a href="https://x.com/username" target="_blank" rel="noopener"><span>🐦</span>X</a>
+      <a href="https://github.com/username" target="_blank" rel="noopener"><span>🐱</span>Github</a>
+      <a href="https://instagram.com/username" target="_blank" rel="noopener"><span>📷</span>IG</a>
+      <a href="https://linkedin.com/in/username" target="_blank" rel="noopener"><span>💼</span>LinkedIn</a>
+      <a href="https://tiktok.com/@username" target="_blank" rel="noopener"><span>🎵</span>TikTok</a>
+      <a href="nadiralarasati@student.telkomuniversity.ac.id" target="_blank" rel="noopener"><span>💌</span>Email</a>
+    </div>
+
+    <h4>Biodata</h4>
+    <!-- HTML Table -->
+    <table>
+      <tr><th>Nama</th><td>Nadira Larasati Prahadi</td></tr>
+      <tr><th>NIM</th><td>102042500038</td></tr>
+      <tr><th>Prodi</th><td>Sistem Informasi</td></tr>
+      <tr><th>Fakultas</th><td>Rekayasa Industri</td></tr>
+    </table>
+
+    <!-- HTML Date and Time -->
+    <div class="clock">🌷 <time id="waktu" datetime="">memuat waktu…</time></div>
+  </section>
+
+  <footer>
+    <h5>Personal Web · Studi Kasus 1</h5>
+    <h6>Dibuat dengan HTML &amp; CSS</h6>
+  </footer>
+</main>
+
+<script>
+function tampil(){
+  var d=new Date();
+  document.getElementById('waktu').textContent=d.toLocaleString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  document.getElementById('waktu').setAttribute('datetime',d.toISOString());
+}
+tampil(); setInterval(tampil,1000);
+</script>
+</body>
+</html>
